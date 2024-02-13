@@ -16,5 +16,7 @@ public class CreditAccountTest {
         account.add(3_000);
 
         Assertions.assertEquals(3_000, account.getBalance());
+        System.out.println("Тест №1 - Добавление баланса");
+
     }
 }
