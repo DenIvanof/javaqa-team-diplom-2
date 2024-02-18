@@ -72,14 +72,15 @@ public class SavingAccountTest {
         });
     }
 
+
     @Test
     public void shouldMinBalanceNegative() {
 
         Assertions.assertThrows(IllegalArgumentException.class, () -> { // исключение, когда минимальный баланс отрицательный
             new SavingAccount(2_000, -1_000, 10_000, 5);
         });
-
     }
+
 
     @Test
     public void shouldMaxBalanceNegative() {
@@ -87,8 +88,8 @@ public class SavingAccountTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> { // исключение, когда максимальный баланс отрицательный
             new SavingAccount(2_000, 1_000, -10_000, 5);
         });
-
     }
+
 
     @Test
     public void shouldInitialBalanceNegative() {
@@ -96,8 +97,8 @@ public class SavingAccountTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> { // исключение, когда начальный баланс отрицательный
             new SavingAccount(-2_000, 1_000, 10_000, 5);
         });
-
     }
+
 
     @Test
     public void TestYearChangeZeroInitialBalance() { // исключение, если начальный баланс равен 0
@@ -105,16 +106,13 @@ public class SavingAccountTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             new SavingAccount(0_000, 2_000, 10_000, 5);
         });
-
     }
-
-
 }
 
 
 
 
 
-}
+
 
 
